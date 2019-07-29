@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Delete Info</title>
+</head>
+<body>
+
+<h2> Delete Your info </h2>
+<form method="post">
+
+{% csrf_token %}
+{{form.as_p}}
+
+<button type="submit"> Delete </button>
+</form>
+</body>
+</html>

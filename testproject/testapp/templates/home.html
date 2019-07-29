@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> HomePage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2> My Profile Detail </h2>
+  <p> Serach by all </p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+		    <th>Address</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Languages You Know</th>
+        <th>Description</th>
+        <th> File </th>
+        <th> Update </th>
+        <th> Delete </th>
+		
+      </tr>
+    </thead>
+    <tbody id="myTable">
+	    {% for i in data %}
+      <tr>
+            <td> {{ i.name }} </td>
+			      <td> {{ i.address }} </td>
+            <td> {{ i.email }} </td>
+            <td> {{ i.city }} </td>
+            <td> {{ i.languages }}</td>
+            <td> {{ i.description }}</td>
+            {% comment %} <td> <img src="{{ i.upload.url }}" style="width: 5%;height:5%"></td> {% endcomment %}
+            
+            <td> <a href="{{ i.upload.url }}">{{ i.upload.url }}</a></td>
+            <td> <button> <a href="{% url 'edit' i.id %}"> Update</a> </button> </td>
+            
+            <td> <button> <a href="{% url 'delete' i.id %}"> Delete </a>  </button> </td>
+          
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  
+  <p><button> <a href="{% url 'add' %}"> add </a>  </button></p>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>

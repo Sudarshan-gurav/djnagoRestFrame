@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Forms </title>
+  </head>
+  <body>
+  <table border="1">
+  <caption> My Details </caption>
+  <tr>
+  <th> Name </th>
+  <th> Company name </th>
+  <th> Mobile Number</th>
+  </tr>
+  <tr>
+  <td> sudarshan </td>
+  <td> Rnt solution</td>
+  <td> 9096622179 </td>
+  </tr>
+  </table>
+<h1> Registration form example </h1>
+<form> 
+<table border="0">
+<tr>
+	<td> Name </td>
+	<td> <input   type="text" placeholder="Name" name="name"> </td>
+</tr>
+
+<tr>
+	<td> Address </td>
+	<td> <input type="text" placeholder="Address" name="add"> </td>
+</tr>
+
+<tr>
+	<td> Mobile  </td>
+	<td> <input   type="number" placeholder="mobile number" name="monumber" > </td>
+</tr>
+
+<tr>
+	<td> Email  </td>
+	<td> <input   type="email" placeholder="Email" name="mail"> </td>
+</tr>
+<tr>
+	<td> Password  </td>
+	<td> <input  type="password" name="pass1" placeholder="password"> </td>
+</tr>1
+<tr>
+	<td> Confirm Password  </td>
+	<td> <input   type="password" name="pass2" placeholder="Confirm password"> </td>
+</tr>
+<tr>
+<td> Fee paid ?  </td>
+<td><input type="checkbox" name="fees"></td>
+  
+</tr>
+
+<tr>
+<td> Gender </td>
+<td> <input type="radio"  name="Gender" value="male"> Male</td>
+<td> <input type="radio" name="Gender" value="female"> Female </td>
+</tr>
+
+<tr> 
+
+<td> Courses </td>
+<br />
+<td>
+	<input type="checkbox"  name="Courses" value="c"> C  
+	<input type="checkbox"  name="Courses" value="c++"> C++ 
+	<input type="checkbox"  name="Courses" value="java"> Java 
+	<input type="checkbox"  name="Courses" value="python"> Python<br />
+	<input type="checkbox"  name="Courses" value="html"> HTML
+	<input type="checkbox" name="Courses" value="css"> CSS
+
+</td>
+</tr>
+<tr>
+   <td> <input type="submit" value="register">
+   </td>
+</tr>
+
+
+</table>
+
+</form>
+<p> <b> File Browse button to upload the file </b></p>
+<center>
+<form>
+<table border="0">
+
+<tr> 
+  <td>Name:</td>
+  <td> <input type="text" name="nameofstudent"><br/></td>
+</tr>
+
+<tr>
+  <td>Attachemt only one :</td>
+  <td><input type="file" name="attchement></td>
+</tr>
+
+<tr>
+  <td> fees paid? </td><br/>
+  <td> <input type="checkbox" name="fesspaid">
+</tr>
+
+ <tr>
+   <td>Color box:</td>
+   <td> <input type="color" name="colorbox"></td>
+ </tr>
+
+<tr>
+   <td>Date of payment:</td>
+   <td> <input type="date" name="dateofpayment"></td>
+ </tr>
+ 
+ <tr>
+   <td> Time</td>
+   <td> <input type="time" name="time"></td>
+ </tr>
+ 
+ <tr>
+   <td> Month of the year </td>
+   <td> <input type="month"  name="monthofyear"></td>
+ </tr>
+
+ <tr>
+ 	 <td> Week of the year </td>
+ 	 <td> <input type="week" name="nameofyear"></td>
+ </tr>
+<tr>
+   <td>Search Box </td>
+   <td> <input type="search" name="searchbox"></td>
+ </tr>
+ 
+ <tr>
+ 	 <td> Number </td>
+ 	 <td> <input type="number" name="numberbox"></td>
+ </tr>
+ 
+<tr>
+ 	<td> Email </td>
+ 	<td> <input type="email" name="emailbox"></td>
+</tr> 
+ 
+ <tr>
+ <td> Range Box </td>
+<td> <input type="range" min="0" max="100" name="rangebox"></td>
+ </tr>
+ 
+ <tr>
+ <td>Url Box </td>
+<td> <input type="url"  name="urlbox"></td>
+ </tr>
+ 
+<tr> 
+<td>Hidden : submit automatic info to server </td>
+<td> <input type="hidden" name="pi" value="3.14" /></td>
+</tr>
+ 
+<tr>
+<td>Reset:</td>
+<td> <input type="submit" value="Register"> <input type="reset" placeholder="reset"> </td>
+</tr> 
+
+</table>
+</form>
+
+</center>
+
+<p> <b>tablindex are used to change the order of tab </b></p>
+<form autocomplete="off" action="delte.html">
+Name: <input type="text" autocomplete="off" pattern="^[A-Za-z ]*$" required="required" name="nameelement"   autofocus="auto" tabindex="1" > <br>
+
+house no: <input type="number" name="h_no"  tabindex="3"><br>
+
+address : <input type="text" required="required" name="add"  tabindex="2"><br />
+
+news_hint:<input type="checkbox" checked="check" /><br />
+
+Gender only : <input type="radio"  checked="check" /> male <br />
+
+<p> we can select multiple file usi ng multiple attribute of file </p>
+
+Select Files <input  type="file" multiple="mutliplefiles"> 
+
+<p><b> min and max attriute of input tag use:-</b> useful in only in case of number and range,date attribute   </p>
+
+Age: <input type="number"  min="18" max="25"  name="age"> <br />
+
+<br />
+
+Search books <input type="search" list="booklist"  name="bookslist">
+
+<datalist id="booklist">
+  <option> C by xyz</option>
+  <option> C++ by xyz</option>
+  <option> Java by xyz</option>
+  <option> HTML,JavaScript by xyz</option>
+  <option> AnuglarJs by xyz</option>
+  <option> Python by xyz</option>
+</datalist>
+
+<br />
+<input type="submit"  value="submit">
+</form>
+
+
+
+
+
+  </body>
+</html>
